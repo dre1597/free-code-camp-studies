@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --white: #f0f0f0;
+  --red: #be3144;
+  --blue: #45567d;
+  --gray: #303841;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 10vh;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: var(--red);
+}
+#navbar ul {
+  display: flex;
+  list-style: none;
+}
+#navbar li {
+  margin-right: 1em;
+}
+.nav-link {
+  display: block;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: var(--white);
+  padding: 1.5rem;
+  font-weight: 500;
+}
+.nav-link:hover {
+  background-color: var(--blue);
+}
+@media (max-width: 900px) {
+  #navbar {
+    display: block;
+    position: static;
+  }
+  #navbar ul {
+    display: block;
+  }
+}
+main {
+  position: relative;
+}
+#welcome-section {
+  width: 100%;
+  height: 100vh;
+  background: #3a3d40;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#welcome-section .welcome__title {
+  color: var(--white);
+  font-size: 4em;
+}
+#welcome-section .welcome__subtitle {
+  color: var(--red);
+  font-size: 2em;
+}
+@media (max-width: 900px) {
+  #welcome-section .welcome__title {
+    font-size: 3em;
+  }
+  #welcome-section .welcome__subtitle {
+    font-size: 1.5em;
+  }
+}
+#projects {
+  width: 100%;
+  background: var(--blue);
+  text-align: center;
+}
+#projects .projects__title {
+  font-size: 3em;
+  color: var(--white);
+  border-bottom: 0.1rem solid var(--white);
+  width: 75%;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+#projects .project__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 3rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 5rem auto;
+}
+#project a {
+  text-decoration: none;
+}
+#projects .project-tile img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  height: calc(100% - 4.75rem);
+}
+#projects .project-tile p {
+  display: block;
+  font-size: 1.5rem;
+  padding: 1.5rem 0.75rem;
+  color: var(--white);
+  background-color: var(--gray);
+}
+#projects .tag__hover {
+  color: var(--gray);
+  transition: color 0.5s ease-out;
+}
+#projects .project-tile:hover .tag__hover {
+  color: yellow;
+}
+#projects .btn-show-all {
+  padding: 0.5em 1em;
+  background-color: var(--gray);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  font-size: 1.3em;
+  margin-bottom: 2rem;
+  transition: background 1s;
+}
+#projects .btn-show-all:hover {
+  background-color: var(--red);
+}
+
+@media (max-width: 900px) {
+  #projects .project-tile {
+    margin: 0 30px;
+  }
+}
+
+#contact {
+  width: 100%;
+  height: 75vh;
+  background: var(--gray);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+}
+#contact .contact__title {
+  font-size: 4em;
+}
+#contact .contact__subtitle {
+  font-size: 1.5em;
+}
+#contact .media__list {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+  color: var(--white);
+  max-width: 900px;
+  margin-top: 3em;
+}
+#contact .media__links {
+  display: inline-block;
+  padding: 1em 1.5em;
+  color: var(--white);
+  text-decoration: none;
+  font-size: 1.3em;
+}
+#footer {
+  background-color: var(--gray);
+  border-top: 5px solid var(--red);
+  text-align: center;
+  color: var(--white);
+  font-size: 1.5rem;
+  padding: 20px;
+}
